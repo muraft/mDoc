@@ -7,7 +7,7 @@ if(!file)return console.log('File is required!')
 let fnCount=0;
 let fnOrder=[];
 let result=[];
-let refList=[];
+let refList=new Map();
 
 if(!file.endsWith('.md'))return console.log('Only md file is supported');
 fs.readFile(file,'utf8',(err,data)=>{
@@ -20,7 +20,8 @@ fs.readFile(file,'utf8',(err,data)=>{
       const num=Number(fn.match(/\[\^(\d+)\]/)[1]);
       
       if(fn.endsWith(':')){
-        refList.push(num);
+        refList.set(num,v.match(/\:(.*)/)[1]);
+        v=false;
         return;
       }
       let newNum=num;
@@ -29,8 +30,14 @@ fs.readFile(file,'utf8',(err,data)=>{
       fnCount=newNum;
       v=v.replace(`[^${num}]`,`[^${newNum}]`);
     })
-    result.push(v);
+    if(v!==false)result.push(v);
   })
-  console.log(result.join('\n'))
+  const newFile=file.replace(/\.md$/,'-markdoc.md');
+  result=result.join('\n')+fnOrder.reduce((a,b,i)=>a+`\n[^${i+1}]: `+(refList.get(b)||''),'');
+  fs.writeFile(newFile,result,(err)=>{
+      if(err)throw err;
+      console.log('Process completed, file "'+newFile+'" created successfully');
+    }
+  )
 })
 
