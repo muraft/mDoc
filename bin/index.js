@@ -33,7 +33,7 @@ fs.readFile(file,'utf8',(err,data)=>{
     if(v!==false)result.push(v);
   })
   const newFile=file.replace(/\.md$/,'-markdoc.md');
-  result=result.join('\n')+fnOrder.reduce((a,b,i)=>a+`\n[^${i+1}]: `+(refList.get(b)||''),'');
+  result=result.join('\n')+'\n'+fnOrder.reduce((a,b,i)=>a+`[^${i+1}]: `+(refList.get(b)||'')+'\n','');
   fs.writeFile(newFile,result,(err)=>{
       if(err)throw err;
       console.log('Process completed, file "'+newFile+'" created successfully');
