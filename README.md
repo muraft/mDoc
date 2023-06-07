@@ -16,7 +16,7 @@ $ npm i -g
 4. The tool is ready to use!
 
 ## Current features
-1. Automatic footnote sorter
+### 1. Automatic footnote sorter
 ```
 mdoc fnsorter fileName.md
 ```
@@ -49,7 +49,7 @@ Aliquam eu accumsan ex.[^6]
 [^5]:  ipsum.com
 [^6]:  ex.com  
 ```
-2. HTMLizer (Unfinished)
+### 2. HTMLizer (Unfinished) 
 Convert markdown to HTML format, can only convert the footnote format for now. 
 ```
 $ mdoc htmlizer
@@ -68,4 +68,4 @@ Footnote example<sup class='fn'><a href='#fn1'>1</a></sup>
 	<li id='fn1'> Example.com</li>
 </ol>
 ```
-Reminder: This command will also sort the footnote automatically 
+Reminder: This tool will also sort the footnote automatically 
