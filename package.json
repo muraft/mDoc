@@ -7,10 +7,11 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
-    "markdown","document"
+    "markdown",
+    "document"
   ],
-  "bin":{
-    "mdoc":"./bin/index.js"
+  "bin": {
+    "mdoc": "./bin/index.js"
   },
   "author": "muraft",
   "license": "ISC"
