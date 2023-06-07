@@ -49,10 +49,12 @@ Aliquam eu accumsan ex.[^6]
 [^5]:  ipsum.com
 [^6]:  ex.com  
 ```
+Note: The result will be written in a new file named 'fileName-markdoc.md'
+
 ### 2. HTMLizer (Unfinished) 
 Convert markdown to HTML format, can only convert the footnote format for now. 
 ```
-$ mdoc htmlizer
+$ mdoc htmlizer fileName.md
 ```
 Before:
 ```
@@ -68,4 +70,6 @@ Footnote example<sup class='fn'><a href='#fn1'>1</a></sup>
 	<li id='fn1'> Example.com</li>
 </ol>
 ```
-Reminder: This tool will also sort the footnote automatically 
+Note: 
+- The result will be written in a new file named 'fileName-markdoc.md'
+- This tool will also sort the footnote automatically 
