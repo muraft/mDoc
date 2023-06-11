@@ -1,5 +1,5 @@
 {
-  "name": "markdoc",
+  "name": "mDoc",
   "version": "1.0.0",
   "description": "A tool for markdown document",
   "main": "bin/index.js",

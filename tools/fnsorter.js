@@ -31,7 +31,7 @@ fs.readFile(file,'utf8',(err,data)=>{
     })
     if(v!==false)result.push(v);
   })
-  const newFile=file.replace(/\.md$/,'-markdoc.md');
+  const newFile=file.replace(/\.md$/,'-mdoc.md');
   result=result.join('\n')+'\n'+fnOrder.reduce((a,b,i)=>a+(htmlizer?
   `\n\t<li id='fn${i+1}'>`+(refList.get(b)||'')+'</li>':
   `[^${i+1}]: `+(refList.get(b)||'')

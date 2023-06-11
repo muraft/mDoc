@@ -1,5 +1,5 @@
-# MarkDoc (On progress)
-MarkDoc is a tool to help you write a document with markdown better
+# mDoc (On progress)
+mDoc(Markdown-Document) is a command line tool to help you write a document with markdown better
 
 ## Installation
 
@@ -7,7 +7,7 @@ MarkDoc is a tool to help you write a document with markdown better
 2. Clone this repository
 ```
 $ git init
-$ git clone https://github.com/muraft/markdoc
+$ git clone https://github.com/muraft/mdoc
 ```
 3. Install the package globally
 ```
@@ -49,7 +49,7 @@ Aliquam eu accumsan ex.[^6]
 [^5]:  ipsum.com
 [^6]:  ex.com  
 ```
-Note: The result will be written in a new file named 'fileName-markdoc.md'
+Note: The result will be written in a new file named 'fileName-mdoc.md'
 
 ### 2. HTMLizer (Unfinished) 
 Convert markdown to HTML format, can only convert the footnote format for now. 
@@ -71,5 +71,5 @@ Footnote example<sup class='fn'><a href='#fn1'>1</a></sup>
 </ol>
 ```
 Note: 
-- The result will be written in a new file named 'fileName-markdoc.md'
+- The result will be written in a new file named 'fileName-mdoc.md'
 - This tool will also sort the footnote automatically 
